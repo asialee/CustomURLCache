@@ -43,7 +43,8 @@ In addition, while initialising the CustomURLCache, the default mode is NORMAL_M
       if you wanna restore all the cache in the subDirectory you set, then do noting, but if you want to delete all the caches , call this function:[_mCache removeCustomRequestDictionary ];
       And maybe you want to store the full path where you download all the page resources to a dictionary, call this:[_mCache subDirectoryFullPath]. It will return the full path.
 
-3. Now suppose you enter this webController again, you fill find this page will be loaded in a minute.
+
+3.Now suppose you enter this webController again, you fill find this page will be loaded in a minute.
 
 
 Using CustomURLCache is just this easy, hope you enjoy it!
