@@ -12,13 +12,17 @@ In the following, I will guide you how to use with this class.
 1. In iOS 8 , change URLCache to your own URLCache can only be executed in the :
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions in the AppDelegate.m . 
 To use the NSURLCache, copy the following code:
+
 CustomURLCache *_mCache = [[CustomURLCache alloc] initWithMemoryCapacity:20 * 1024 * 1024
                                                 diskCapacity:200 * 1024 * 1024
                                                     diskPath:nil
                                                    cacheTime:0
                                                 subDirectory:nil];
+
 [NSURLCache setSharedURLCache:_mCache];
+
 This will shift the URLCache from NSURLCache to your CustomURLCache.
+
 The parameters:
 		disPath is the path where you want to store. if set to nil, it equals the default cache directory.
 		cacheTime is the expiring time of the caches.if set to 0, the cache will never be expired.
@@ -28,6 +32,7 @@ In addition, while initialising the CustomURLCache, the default mode is NORMAL_M
 
 2. Now, you may want to use download mode in your app. And in the following, I will give an example of downloading all the resource of a web page to teach you how to use this class.
    Let’s denote the controller where you want to display the web page webController.
+   
    1) In the (id)init function or (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil of webController, add the following code:
 	 CustomURLCache *_mCache = (CustomURLCache *)[NSURLCache sharedURLCache];
         [_mCache changeToDownloadMode:_subDir];//_subDir is the sub directory under diskPath to store your URL request.
