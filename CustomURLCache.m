@@ -2,8 +2,8 @@
 //  CustomURLCache.m
 //  LocalCache
 //
-//  Created by tan on 13-2-12.
-//  Copyright (c) 2013年 adways. All rights reserved.
+//  Created by liyazhou on 25-10-14.
+//  Copyright (c) 2014年 adways. All rights reserved.
 //
 
 #import "CustomURLCache.h"
