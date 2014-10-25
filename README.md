@@ -9,8 +9,7 @@ There are 2 modes in this class:NORMAL_MODE,DOWN_MODE.While NORMAL_MODE does the
 
 In the following, I will guide you how to use with this class.
 
-1. In iOS 8 , change URLCache to your own URLCache can only be executed in the :
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions in the AppDelegate.m . 
+1. In iOS 8 , change URLCache to your own URLCache can only be executed in the :- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions in the AppDelegate.m . 
 To use the NSURLCache, copy the following code:
 
 CustomURLCache *_mCache = [[CustomURLCache alloc] initWithMemoryCapacity:20 * 1024 * 1024
@@ -30,7 +29,7 @@ The parameters:
 In addition, while initialising the CustomURLCache, the default mode is NORMAL_MODE which means the function of this class now is completely same as NSURLCache.
 
 
-2. Now, you may want to use download mode in your app. And in the following, I will give an example of downloading all the resource of a web page to teach you how to use this class.
+2.Now, you may want to use download mode in your app. And in the following, I will give an example of downloading all the resource of a web page to teach you how to use this class.
    Let’s denote the controller where you want to display the web page webController.
    
    1) In the (id)init function or (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil of webController, add the following code:
