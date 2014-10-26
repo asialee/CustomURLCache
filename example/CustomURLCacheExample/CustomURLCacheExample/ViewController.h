@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomURLCache.h"
 @interface ViewController : UIViewController
-
+//@property (strong, nonatomic) IBOutlet UIWebView *mWebview;
+- (IBAction)enterDisplayPage:(id)sender;
 
 @end
 

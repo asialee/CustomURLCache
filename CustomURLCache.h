@@ -2,7 +2,7 @@
 //  CustomURLCache.h
 //  LocalCache
 //
-//  Created by liyazhou  on 25-10-14.
+//  Created by asialee on 14-10-25.
 //  Copyright (c) 2014年 adways. All rights reserved.
 //
 

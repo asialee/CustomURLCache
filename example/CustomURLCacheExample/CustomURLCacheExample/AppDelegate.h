@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomURLCache.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) CustomURLCache *mCache;
+@property (strong, nonatomic) UINavigationController *navController;
 
 @end
 

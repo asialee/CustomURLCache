@@ -17,6 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.navController = [[UINavigationController alloc]initWithRootViewController:self.window.rootViewController];
+    self.window.rootViewController = self.navController;
+    self.navController.navigationBarHidden = YES;
+    
+    _mCache = [[CustomURLCache alloc] initWithMemoryCapacity:20 * 1024 * 1024
+                                                diskCapacity:200 * 1024 * 1024
+                                                    diskPath:nil
+                                                   cacheTime:0
+                                                subDirectory:nil];
+    [NSURLCache setSharedURLCache:_mCache];
+    [_mCache changeToDownloadMode:@"dir"];
     return YES;
 }
 

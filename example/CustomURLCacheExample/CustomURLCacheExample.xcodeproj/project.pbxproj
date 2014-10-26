@@ -14,6 +14,10 @@
 		371AD4A119FB594C00F2B025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371AD4A019FB594C00F2B025 /* Images.xcassets */; };
 		371AD4A419FB594C00F2B025 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371AD4A219FB594C00F2B025 /* LaunchScreen.xib */; };
 		371AD4B019FB594C00F2B025 /* CustomURLCacheExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 371AD4AF19FB594C00F2B025 /* CustomURLCacheExampleTests.m */; };
+		371AD4BE19FB597E00F2B025 /* CustomURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 371AD4BB19FB597E00F2B025 /* CustomURLCache.m */; };
+		371AD4BF19FB597E00F2B025 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 371AD4BD19FB597E00F2B025 /* Util.m */; };
+		376C120219FCA06B004730B1 /* DisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C120019FCA06B004730B1 /* DisplayController.m */; };
+		376C120319FCA06B004730B1 /* DisplayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 376C120119FCA06B004730B1 /* DisplayController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		371AD4A919FB594C00F2B025 /* CustomURLCacheExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomURLCacheExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		371AD4AE19FB594C00F2B025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		371AD4AF19FB594C00F2B025 /* CustomURLCacheExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomURLCacheExampleTests.m; sourceTree = "<group>"; };
+		371AD4BA19FB597E00F2B025 /* CustomURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomURLCache.h; path = cache/CustomURLCache.h; sourceTree = "<group>"; };
+		371AD4BB19FB597E00F2B025 /* CustomURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomURLCache.m; path = cache/CustomURLCache.m; sourceTree = "<group>"; };
+		371AD4BC19FB597E00F2B025 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Util.h; path = cache/Util.h; sourceTree = "<group>"; };
+		371AD4BD19FB597E00F2B025 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Util.m; path = cache/Util.m; sourceTree = "<group>"; };
+		376C11FF19FCA06B004730B1 /* DisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayController.h; sourceTree = "<group>"; };
+		376C120019FCA06B004730B1 /* DisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayController.m; sourceTree = "<group>"; };
+		376C120119FCA06B004730B1 /* DisplayController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +92,7 @@
 		371AD49219FB594C00F2B025 /* CustomURLCacheExample */ = {
 			isa = PBXGroup;
 			children = (
+				371AD4B919FB596C00F2B025 /* cache */,
 				371AD49719FB594C00F2B025 /* AppDelegate.h */,
 				371AD49819FB594C00F2B025 /* AppDelegate.m */,
 				371AD49A19FB594C00F2B025 /* ViewController.h */,
@@ -89,6 +101,9 @@
 				371AD4A019FB594C00F2B025 /* Images.xcassets */,
 				371AD4A219FB594C00F2B025 /* LaunchScreen.xib */,
 				371AD49319FB594C00F2B025 /* Supporting Files */,
+				376C11FF19FCA06B004730B1 /* DisplayController.h */,
+				376C120019FCA06B004730B1 /* DisplayController.m */,
+				376C120119FCA06B004730B1 /* DisplayController.xib */,
 			);
 			path = CustomURLCacheExample;
 			sourceTree = "<group>";
@@ -117,6 +132,17 @@
 				371AD4AE19FB594C00F2B025 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		371AD4B919FB596C00F2B025 /* cache */ = {
+			isa = PBXGroup;
+			children = (
+				371AD4BA19FB597E00F2B025 /* CustomURLCache.h */,
+				371AD4BB19FB597E00F2B025 /* CustomURLCache.m */,
+				371AD4BC19FB597E00F2B025 /* Util.h */,
+				371AD4BD19FB597E00F2B025 /* Util.m */,
+			);
+			name = cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376C120319FCA06B004730B1 /* DisplayController.xib in Resources */,
 				371AD49F19FB594C00F2B025 /* Main.storyboard in Resources */,
 				371AD4A419FB594C00F2B025 /* LaunchScreen.xib in Resources */,
 				371AD4A119FB594C00F2B025 /* Images.xcassets in Resources */,
@@ -219,7 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376C120219FCA06B004730B1 /* DisplayController.m in Sources */,
+				371AD4BF19FB597E00F2B025 /* Util.m in Sources */,
 				371AD49C19FB594C00F2B025 /* ViewController.m in Sources */,
+				371AD4BE19FB597E00F2B025 /* CustomURLCache.m in Sources */,
 				371AD49919FB594C00F2B025 /* AppDelegate.m in Sources */,
 				371AD49619FB594C00F2B025 /* main.m in Sources */,
 			);
@@ -412,6 +442,7 @@
 				371AD4B519FB594C00F2B025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		371AD4B619FB594C00F2B025 /* Build configuration list for PBXNativeTarget "CustomURLCacheExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +451,7 @@
 				371AD4B819FB594C00F2B025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
