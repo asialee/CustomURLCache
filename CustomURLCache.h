@@ -19,14 +19,14 @@ typedef enum
 }
 @property(nonatomic, assign) NSInteger cacheTime;
 //The disk path where you want to download the request result to 
-@property(nonatomic, retain) NSString *diskPath;
-@property(nonatomic, retain) NSString *subDirectory;
+@property(nonatomic, strong) NSString *diskPath;
+@property(nonatomic, strong) NSString *subDirectory;
 
 //The dictionary for the results downloaded
-@property(nonatomic, retain) NSMutableDictionary *responseDictionary;
+@property(nonatomic, strong) NSMutableDictionary *responseDictionary;
 
 //The dictionary for the requests
-@property(nonatomic, retain) NSMutableDictionary *requestDictionary;
+@property(nonatomic, strong) NSMutableDictionary *requestDictionary;
 @property(nonatomic, assign) BOOL savedOnDisk;
 
 - (id)initWithMemoryCapacity:(NSUInteger)memoryCapacity diskCapacity:(NSUInteger)diskCapacity diskPath:(NSString *)path cacheTime:(NSInteger)cacheTime subDirectory:(NSString*)subDirectory;
